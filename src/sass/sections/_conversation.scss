@@ -1,5 +1,5 @@
 #conversation {
-    background-image: url("../img/wallpaper_light.png?");
+    background-image: url('../img/wallpaper_light.png?');
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -17,7 +17,6 @@
 
         .header-details {
             @include mouse-hand;
-
 
             & > *:first-child {
                 font-weight: bold;
@@ -37,13 +36,14 @@
         justify-content: center;
         display: flex;
     }
+
     #conversation-chat {
         flex-grow: 1;
         overflow: auto;
     }
 
     #conversation-quote {
-        background-color: white;
+        background-color: $color-white;
         padding: 8px;
         display: flex;
         justify-content: center;
@@ -56,9 +56,6 @@
         }
     }
 
-    $footer-height: 64px;
-
-    $scrolljump-height: 36px;
     #scrolljump {
         align-self: flex-end;
         height: 0;
@@ -84,7 +81,6 @@
         }
     }
 }
-
 
 /**
  Quoting
@@ -117,6 +113,7 @@
     min-height: 100%;
     margin: 0;
     padding: 0;
+
     li {
         margin: 0 0 $main-padding 0;
         padding: 0;
@@ -125,11 +122,12 @@
         &.load-more {
             margin-top: $main-padding;
             text-align: center;
+
             .loading {
                 $loading-element-size: 20px;
-                background-color: white;
+                background-color: $color-white;
                 border-radius: 50%;
-                display:inline-block;
+                display: inline-block;
                 padding: $main-padding;
                 @include message-bubble-shadow;
             }
@@ -164,7 +162,8 @@
 
         .loading-element {
             margin: 0;
-            &>:first-child {
+
+            & > :first-child {
                 width: 50px;
                 height: 50px;
             }
@@ -176,11 +175,12 @@
             width: $bubble-triangle-size;
             height: $bubble-triangle-size;
 
-            &:after {
+            &::after {
                 @include message-bubble-triangle;
                 z-index: 3;
             }
-            &:before{
+
+            &::before {
                 @include message-bubble-triangle;
                 @include message-bubble-shadow;
                 z-index: 1;
@@ -190,11 +190,12 @@
     }
 
     .message-body {
-        -webkit-border-radius:5px;
-        -moz-border-radius:5px;
-        border-radius:5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
         z-index: 2;
         max-width: 85%;
+
         &:not(.text-message-body) {
             // set fixed height to thumbnails
             .thumbnail-loader {
@@ -204,11 +205,13 @@
                 height: calc(100%);
                 max-width: 100%;
                 max-height: 100%;
+
                 img {
                     filter: blur(10px);
                     width: 100%;
                 }
             }
+
             .thumbnail {
                 text-align: center;
                 max-width: 100%;
@@ -217,7 +220,7 @@
                 //    height: 100%;
                 //    width: auto;
                 //}
-								//
+                //
                 //&.location {
                 //    height: 200px;
                 //    > img {
@@ -226,12 +229,14 @@
                 //    }
                 //}
             }
+
             .message-text {
                 margin-top: 8px;
                 display: inline-block;
             }
         }
     }
+
     .message-in {
         .message-body {
             position: relative;
@@ -240,12 +245,13 @@
 
         /* arrow */
         .bubble-triangle {
-
             margin-left: $main-padding;
-            &:after {
+
+            &::after {
                 background-color: $message-bubble-color-in;
             }
-            &:before{
+
+            &::before {
                 background-color: $message-bubble-color-in;
             }
         }
@@ -269,10 +275,11 @@
         .bubble-triangle {
             left: 0 - $bubble-triangle-size;
 
-            &:after {
+            &::after {
                 background-color: $message-bubble-color-out;
             }
-            &:before{
+
+            &::before {
                 background-color: $message-bubble-color-out;
             }
         }
@@ -319,6 +326,7 @@
                 align-items: center;
                 flex-direction: column;
                 padding: 4px 0;
+
                 i {
                     margin-left: -3px;
                     margin-right: 2px;
@@ -334,7 +342,6 @@
             }
         }
 
-
         .message-info {
             height: 16px;
             margin-top: 4px;
@@ -346,6 +353,7 @@
 
             .message-state {
                 margin-left: 5px;
+
                 i {
                     position: relative;
                     top: 2px;
@@ -399,7 +407,8 @@
     .message-info {
         .message-meta-item {
             padding-right: 5px;
-            &:after {
+
+            &::after {
                 content: "|";
                 padding-left: 5px;
             }

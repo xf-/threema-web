@@ -15,6 +15,7 @@ body {
             height: calc(100% - 5px) !important;
         }
     }
+
     &.expanded {
         &.status-warning,
         &.status-error {
@@ -22,6 +23,7 @@ body {
             #status-bar {
                 height: 50px;
             }
+
             // Resize messenger
             #messenger {
                 height: calc(100% - 50px);
@@ -30,6 +32,7 @@ body {
                 #status-bar {
                     height: 65px;
                 }
+
                 #messenger {
                     height: calc(100% - 65px);
                 }
@@ -38,6 +41,7 @@ body {
                 #status-bar {
                     height: 80px;
                 }
+
                 #messenger {
                     height: calc(100% - 80px);
                 }
@@ -45,13 +49,16 @@ body {
         }
     }
 }
+
 .status-ok {
     #status-bar {
         background-color: $status-ok;
     }
 
-    #title .dot {
-        fill: $status-ok;
+    #title {
+        .dot {
+            fill: $status-ok;
+        }
     }
 }
 
@@ -63,8 +70,10 @@ body {
         background-color: $status-warning;
     }
 
-    #title .dot {
-        fill: $status-warning;
+    #title {
+        .dot {
+            fill: $status-warning;
+        }
     }
 }
 
@@ -72,8 +81,11 @@ body {
     #status-bar {
         background-color: $status-error;
     }
-    #title .dot {
-        fill: $status-error;
+
+    #title {
+        .dot {
+            fill: $status-error;
+        }
     }
 }
 
@@ -89,12 +101,12 @@ body {
 
     // Loading indicator color
     path {
-        stroke: white !important;
+        stroke: $color-white !important;
     }
 
     > div {
-        color: white;
-        text-shadow: 0 1px 1px rgba(0, 0, 0, .5);
+        color: $color-white;
+        text-shadow: 0 1px 1px transparentize($color-black, .5);
 
         margin: 8px;
 

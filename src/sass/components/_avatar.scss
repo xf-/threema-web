@@ -6,6 +6,7 @@
             border-radius: 50%;
         }
     }
+
     &.avatar-high {
 
         max-width: 540px;
@@ -21,6 +22,7 @@
             }
         }
     }
+
     .avatar-loading {
         position: absolute;
         width: 100%;
@@ -37,9 +39,9 @@
             top: calc(50% - #{$circle-diameter / 2});
         }
     }
+
     > img {
         width: 100%;
     }
-
 
 }

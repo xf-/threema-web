@@ -5,16 +5,18 @@ header {
 }
 
 #title {
-    #logo {
-        display: block;
-        width: 100%;
-        svg {
-            width: 220px;
-            margin: 0 auto;
-            fill: white;
-        }
-    }
     display: block;
     position: relative;
     top: 8px;
+
+    #logo {
+        display: block;
+        width: 100%;
+
+        svg {
+            width: 220px;
+            margin: 0 auto;
+            fill: $color-white;
+        }
+    }
 }

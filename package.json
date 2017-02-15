@@ -11,7 +11,7 @@
     "serve": "npm run build:css && budo src/app.ts:dist/app.js -- -d -p tsify -t [ babelify --presets [ es2015 ] --extensions .ts ]",
     "serve:live": "npm run build:css && concurrently --kill-others --names 'css,server' -p name 'npm run build:css:watch' 'budo src/app.ts:dist/app.js -d . -d public -d src --live -- -d -p tsify -t [ babelify --presets [ es2015 ] --extensions .ts ]'",
     "test": "karma start --single-run --log-level=debug --colors",
-    "lint": "tslint -c tslint.json --project tsconfig.json --exclude '**/src/config.ts'",
+    "lint": "tslint -c tslint.json --project tsconfig.json --exclude '**/src/config.ts' && sass-lint -c .sass-lint.yml -v -q",
     "clean": "rm -rf js/ build/ dist/app*"
   },
   "keywords": [
@@ -72,6 +72,7 @@
     "karma-chrome-launcher": "^2.0.0",
     "karma-firefox-launcher": "^1.0.0",
     "karma-jasmine": "^1.1.0",
+    "sass-lint": "^1.10.2",
     "tslint": "^4.3.1"
   }
 }

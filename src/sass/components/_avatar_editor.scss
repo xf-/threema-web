@@ -3,13 +3,15 @@
 
     &.is-dragover {
         .avatar-editor-drag {
-            border-color: black !important;
+            border-color: $color-black !important;
         }
     }
+
     .avatar-editor-drag {
         margin: auto auto !important;
         width: $avatar-size;
         height: $avatar-size;
+
         &:not(.has-image) {
             border: 5px dotted gray;
         }

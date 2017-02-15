@@ -1,0 +1,14 @@
+files:
+  include: 'src/**/*.s+(a|c)ss'
+
+rules:
+  indentation:
+    - 2
+    -
+      size: 4
+  property-sort-order: 0
+  no-ids: 0
+  leading-zero: 0
+  no-important: 0
+  nesting-depth: 0
+  no-transition-all: 0

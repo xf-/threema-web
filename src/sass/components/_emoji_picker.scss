@@ -41,8 +41,8 @@
         right: 0;
         bottom: 0;
         padding: 16px 4px 0;
-        background: white;
-        border: 1px solid white;
+        background: $color-white;
+        border: 1px solid $color-white;
         overflow-y: scroll;
         &::selection {
             background: rgba(255, 255, 255, 0.0);
@@ -54,8 +54,8 @@
     }
 
     [type=radio]:checked ~ label {
-        background: white;
-        border-bottom: 1px solid white;
+        background: $color-white;
+        border-bottom: 1px solid $color-white;
         z-index: 2;
     }
 
@@ -64,8 +64,8 @@
     }
 
     ::-webkit-scrollbar {
-        background-color: white;
-        border: 1px solid white;
+        background-color: $color-white;
+        border: 1px solid $color-white;
     }
 
     ::-webkit-scrollbar-thumb {

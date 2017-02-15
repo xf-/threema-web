@@ -7,9 +7,11 @@ a {
     &:link, &:visited {
         color: #265C83;
     }
+
     &:hover {
         color: lighten(#265C83, 30%);
     }
+
     &:active {
         transition: color .3s;
         color: #007BE6;

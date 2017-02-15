@@ -8,6 +8,7 @@
             justify-content: center;
             align-content: center;
             margin: $main-padding $main-padding $main-padding 0;
+
             &:first-child {
                 margin-left: $main-padding;
             }
@@ -19,6 +20,7 @@
                 flex-grow: 1;
                 overflow-x: hidden;
                 overflow-y: auto;
+
                 // This is where the user enters text
                 div.compose {
                     padding: $main-padding;
@@ -35,6 +37,7 @@
                     }
                 }
             }
+
             &:first-child,
             &:last-child {
                 padding-top: $main-padding;
@@ -44,11 +47,14 @@
         // configure all triggers
         .trigger {
             opacity: 0.5;
+
             &::selection {
-                background: white;
+                background: $color-white;
             }
+
             &.is-enabled {
                 @include mouse-hand;
+
                 &:hover {
                     opacity: 1;
                 }
@@ -57,6 +63,7 @@
             &.is-active {
                 opacity: 1;
             }
+
             &:not(.is-enabled) {
                 opacity: 0.1;
             }
@@ -79,9 +86,11 @@
     // Emoji picker window
     .emoji-keyboard {
         transform: scale(1);
+
         &:not(.active) {
             max-height: 0;
             display: none;
+
             .tab {
                 float: none;
             }
